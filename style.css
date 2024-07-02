@@ -1,0 +1,151 @@
+/* General Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(135deg, #1d1d1d, #131313);
+    color: #fff;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    text-align: center;
+    padding: 2rem 0;
+    background: #121212;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+}
+
+header h1 {
+    font-size: 2.5rem;
+    color: #00ff99;
+    margin: 0.5rem;
+}
+
+header p {
+    margin: 0.2rem;
+}
+
+.profile-img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin: 0 auto;
+    border: 2px solid #00ff99;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+    padding: 2rem;
+}
+
+.card {
+    background: #1e1e1e;
+    border-radius: 1rem;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+    padding: 1.5rem;
+    width: 300px;
+    transition: transform 0.3s, background 0.3s;
+    position: relative;
+    overflow: hidden;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    background: linear-gradient(135deg, #2c2c2c, #1a1a1a);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
+}
+
+.card h3 {
+    margin-top: 0;
+    color: #00ff99;
+}
+
+.card p {
+    color: #ccc;
+}
+
+.icons {
+    display: flex;
+    justify-content: center;
+    margin-top: 1rem;
+    gap: 1rem;
+}
+
+.icons a {
+    text-decoration: none;
+    color: #fff;
+    transition: color 0.3s, transform 0.3s, box-shadow 0.3s;
+    font-size: 2rem;
+    position: relative;
+}
+
+.icons a::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    height: 100%;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+    opacity: 0;
+    transition: opacity 0.3s, box-shadow 0.3s;
+}
+
+.icons a.linkedin:hover::after {
+    box-shadow: 0 0 20px 10px rgba(0, 119, 181, 0.6);
+    opacity: 1;
+}
+
+.icons a.instagram:hover::after {
+    box-shadow: 0 0 20px 10px rgba(193, 53, 132, 0.6);
+    opacity: 1;
+}
+
+.icons a.phone:hover::after {
+    box-shadow: 0 0 20px 10px rgba(0, 255, 0, 0.6);
+    opacity: 1;
+}
+
+.icons a.email:hover::after {
+    box-shadow: 0 0 20px 10px rgba(255, 0, 0, 0.6);
+    opacity: 1;
+}
+
+.icons a.twitter:hover::after {
+    box-shadow: 0 0 20px 10px rgba(29, 161, 242, 0.6);
+    opacity: 1;
+}
+
+.icons a img {
+    width: 40px;
+    height: 40px;
+    filter: brightness(0) invert(1);
+    transition: filter 0.3s, transform 0.3s;
+}
+
+.icons a:hover img {
+    filter: brightness(1) invert(0);
+    transform: scale(1.2);
+}
+
+.glow-on-hover {
+    position: relative;
+    border: none;
+    outline: none;
+    color: #fff;
+    background: #00ff99;
+    text-align: center;
+    transition: all 0.3s;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1.2rem;
+    padding: 0.5rem 1rem;
+    margin-top: 1rem;
+    display: block;
+}
+
+.glow-on-hover::before {
+    content: '';
